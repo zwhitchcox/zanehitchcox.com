@@ -1,11 +1,58 @@
+<head>
+<script>
+//this is where you replace the url (var URL = 'YOUR_URL), that you got from Google Docs
+var URL = 'https://docs.google.com/document/d/1xTOH1V_mG67vLs67dEIuwSu7BKxiFuB0RReraJ1Go0Y/pub'
+</script>
 <style>
-	* {
-		margin:0;padding:0;
-	}
-	body {
-		overflow-x: hidden;
-		overflow-y: hidden;
-	}
+body {
+	padding: 30px 5%;
+}
+* {
+	font-size: 14pt !important;
+}
+span, span:hover, span:visited, span:active {
+	text-decoration: none !important;
+}
 </style>
-<base target="_blank" />
-<iframe style="width:100vw; overflow-x: hidden; height:100vh" src="https://docs.google.com/document/d/1xTOH1V_mG67vLs67dEIuwSu7BKxiFuB0RReraJ1Go0Y/pub?embedded=true"></iframe>
+<script>
+function httpGetAsync(theUrl, callback)
+{
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function() { 
+		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+			callback(xmlHttp.responseText);
+	}
+	xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+	xmlHttp.send(null);
+}
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
+
+httpGetAsync(URL,
+	function(response) {
+		response = response.replace(/0025cf/g,'2022 \\00a0\\00a0 ')
+		response = response.replace(/0025cb/g,'25e6 \\00a0\\00a0 ')
+		document.body.innerHTML = '<div class="container">'+response+'</div>'
+		document.getElementById('footer').remove()
+		document.getElementById('header').remove()
+
+		Array.prototype.slice(document.getElementsByTagName('a'))
+			.forEach(function(el) {
+				el.setAttribute('target','_blank')
+			})
+	}
+)
+</script>
+
+</head>
+<body>
+</body>

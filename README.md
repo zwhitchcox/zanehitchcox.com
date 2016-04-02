@@ -2,7 +2,9 @@
 
 Check it out [zanehitchcox.com](http://zanehitchcox.com). I can edit that at any point using Google Docs, and it's automatically published to the site within seconds. 
 
-Now, I can put my website on my business cards, send it to employers, and no everyone will always have a fresh, professional copy of my resume.
+Now, I can put my website on my business cards, send it to employers, and now everyone will always have a fresh, professional copy of my resume.
+
+I can also add styles and run custom scripts, because I am not loading the doc into an iframe.
 
 ## How did I did I do this?
 
@@ -22,21 +24,9 @@ Pretty simple, I just:
 	* [Sign up for github](https://github.com)
 	* [Create a repository name USERNAME.github.io](https://github.com/new)
 	* Add a new file after your repository is created. From the repository home page, where it is telling you how to set up your repository, go to the address bar and add `/new/master` to the current address, and push enter
-	* name your file index.html, and paste these contents into the file, substituting __URL__ with the embed url from your google doc
-	```html
-	<style>
-		* {
-			margin:0;padding:0;
-		}
-		body {
-			overflow-x: hidden;
-			overflow-y: hidden;
-		}
-	</style>
-	<iframe style="width:100vw; overflow-x: hidden; height:100vh" src="__URL__"></iframe>
-	```
-	and save the file
+	* name your file index.html, and paste in the contents from [my index.html page](https://github.com/zwhitchcox/zwhitchcox.github.io/blob/master/index.html) into your own. Then replace [the url](https://github.com/zwhitchcox/zwhitchcox.github.io/blob/master/index.html#L4) with your own	and save the file
 	* Now, click on new file and add a new file called CNAME and add your domain to the file, and that's it. Save, and you're done.
+
 
 Now, the best laid plans of mice and men are doomed to fail, so if something goes wrong, don't panic, just [let me know](http://github.com/zwhitchcox/zwhitchcox.github.io/issues). <- if that link doesn't work, then it's ok to panic.
 
