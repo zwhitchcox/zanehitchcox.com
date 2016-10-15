@@ -29,4 +29,3 @@ Pretty simple, I just:
 
 
 Now, the best laid plans of mice and men are doomed to fail, so if something goes wrong, don't panic, just [let me know](http://github.com/zwhitchcox/zwhitchcox.github.io/issues). <- if that link doesn't work, then it's ok to panic.
-
