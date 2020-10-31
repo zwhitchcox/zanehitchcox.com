@@ -1,0 +1,32 @@
+.top-nav {
+  background-color: $indigo-dye;
+  padding: .2em;
+  font-size: 1.2em;
+  ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    a, a:hover, a:visited {
+      text-decoration: none;
+      display: block;
+      color: white;
+    }
+    li {
+      padding: .3em .8em;
+    }
+    .logo {
+      font-size: 1.6em;
+      padding: .3em;
+      font-family: 'Bellota', sans-serif;
+    }
+    .space {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media print {
+  .top-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ececec;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+// https://coolors.co/c33c54-254e70-37718e-8ee3ef-aef3e7
+$brick-red: hsla(349, 53%, 50%, 1);
+$indigo-dye: hsla(207, 50%, 29%, 1);
+$celadon-blue: hsla(200, 44%, 39%, 1);
+$sky-blue-crayola: hsla(187, 75%, 75%, 1);
+$celeste: hsla(170, 74%, 82%, 1);
+
+// light
+$indigo-dye-light: hsla(207, 50%, 80%, 1);
+
+// dark
+$indigo-dye-dark: hsla(207, 50%, 30%, 1);
+
+h1, h2 {
+  text-align: center;
+}
+main {
+  margin: 1em;
+}
+@media print {
+  main {
+    font-size: .8em;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $indigo-dye-dark;
+}
+
+@import "./Cmpt/Header.scss";

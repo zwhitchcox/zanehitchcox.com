@@ -1,32 +1,46 @@
-# Easy way to put your resume online
+# Getting Started with Create React App
 
-Check it out [zanehitchcox.com](http://zanehitchcox.com). I can edit that at any point using Google Docs, and it's automatically published to the site within seconds. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Now, I can put my website on my business cards, send it to employers, and now everyone will always have a fresh, professional copy of my resume.
+## Available Scripts
 
-I can also add styles and run custom scripts, because I am not loading the doc into an iframe.
+In the project directory, you can run:
 
-## How did I did I do this?
+### `yarn start`
 
-Pretty simple, I just:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. [Purchased my name's domain name](http://hostmonster.com)
-2. [Signed up for a cloudflare account](https://cloudflare.com)
-3. [Added the site to cloudflare](https://www.cloudflare.com/a/add-site)
-4. Deleted the default A record and added two pointing to github's github pages servers (free)
-	* 192.30.252.153
-	* 192.30.252.154
-5. Pointed the domain host's nameservers to cloudflare (cloudflare shows you how to do this in the next step
-6. [Created my resume in Google Docs](https://drive.google.com)
-7. Got the embed iFrame from my Google doc
-	* File -> Publish to Web -> Embed
-8. Created a gh-pages site
-	* [Sign up for github](https://github.com)
-	* [Create a repository name USERNAME.github.io](https://github.com/new)
-	* Add a new file after your repository is created. From the repository home page, where it is telling you how to set up your repository, go to the address bar and add `/new/master` to the current address, and push enter
-	* name your file index.html, and paste in the contents from [my index.html page](https://github.com/zwhitchcox/zwhitchcox.github.io/blob/master/index.html) into your own. Then replace [the url](https://github.com/zwhitchcox/zwhitchcox.github.io/blob/master/index.html#L4) with your own	and save the file
-	* Now, click on new file and add a new file called CNAME and add your domain to the file, and that's it. Save, and you're done.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
+### `yarn test`
 
-Now, the best laid plans of mice and men are doomed to fail, so if something goes wrong, don't panic, just [let me know](http://github.com/zwhitchcox/zwhitchcox.github.io/issues). <- if that link doesn't work, then it's ok to panic.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
