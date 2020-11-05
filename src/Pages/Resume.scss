@@ -40,7 +40,7 @@
   .skills {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
     justify-items: space-around;
     margin: 0 2em;

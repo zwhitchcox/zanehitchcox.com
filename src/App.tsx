@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Cmpt/Header'
 import Resume from './Pages/Resume'
-import Refs from './Pages/Refs'
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,9 +16,6 @@ function App() {
         <Header />
         <main>
           <Switch>
-            <Route path="/refs">
-              <Refs />
-            </Route>
             <Route path="/">
               <Resume />
             </Route>

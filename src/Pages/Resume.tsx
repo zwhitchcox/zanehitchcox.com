@@ -26,7 +26,7 @@ const renderSkills = data => (
   <h3>Skills/Interests</h3>
   <ul className="skills">
     {data.skills.map(skill => (
-      <li>{skill}</li>
+      <li key={skill}>{skill}</li>
     ))}
   </ul>
   </section>
@@ -40,7 +40,7 @@ const renderOpenSource = data => (
         <p>Creator/Maintainer</p>
         <ul>
           {data.open_source.creator.map(({name, link}) => (
-            <a href={link}><li>{name}</li></a>
+            <a href={link} key={link}><li>{name}</li></a>
           ))}
         </ul>
       </div>
@@ -48,7 +48,7 @@ const renderOpenSource = data => (
         <p>Contributor</p>
         <ul>
           {data.open_source.contributor.map(({name, link}) => (
-            <a href={link}><li>{name}</li></a>
+            <a key={link} href={link}><li>{name}</li></a>
           ))}
         </ul>
       </div>
@@ -65,7 +65,7 @@ const ContractorExperience = ({jobs, duration}) => (
     <div className="description">
       <ul>
         {jobs.map(({company, title, description}) => (
-          <li><p><i>{company}</i> - {title}</p>
+          <li key={company}><p><i>{company}</i> - {title}</p>
           <p>{description}</p>
           </li>
         ))}
@@ -89,15 +89,15 @@ const EmployeeExperience = ({company, title, duration, description}) => (
 const renderExperience = data => (
   <section>
     <h3>Work Experience</h3>
-    {data.experience.map(experience => {
+    {data.experience.map((experience, i) => {
       if (experience.type === "employee") {
         return <>
-          <EmployeeExperience {...experience} />
+          <EmployeeExperience {...experience} key={i} />
         </>
       }
       if (experience.type === "contractor") {
         return <>
-          <ContractorExperience {...experience} />
+          <ContractorExperience {...experience} key={i}/>
         </>
       }
     })}
@@ -108,7 +108,7 @@ const renderEducation = ({education}) => (
   <section>
     <h3>Education</h3>
     {education.map(({school, location, graduation, degree, major, minor}) => (
-      <div className="education">
+      <div key={school} className="education">
         <div className="general">
           <div>
             <i>{school}, {location}</i>
