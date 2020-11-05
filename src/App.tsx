@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Cmpt/Header'
 import Resume from './Pages/Resume'
 import {
@@ -7,13 +7,20 @@ import {
   Route,
 } from "react-router-dom"
 
-import './App.css';
-
 function App() {
+  const [darkMode, _setDarkMode] = useState(true)
+  const setDarkMode = bool => {
+    if (bool) {
+      document.body.className="body-dark"
+    } else {
+      document.body.className= ""
+    }
+    _setDarkMode(bool)
+  }
   return (
     <Router>
-      <div className="App">
-        <Header />
+      <div className={`App ${darkMode ? "App-dark" : ""}`}>
+        <Header {...({darkMode, setDarkMode})} />
         <main>
           <Switch>
             <Route path="/">

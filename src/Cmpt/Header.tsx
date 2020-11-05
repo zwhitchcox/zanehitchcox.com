@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-import { FaGithub, FaEnvelope, FaPhone, FaPrint, FaBook, FaBars } from 'react-icons/fa'
+import { FaGithub, FaEnvelope, FaPhone, FaPrint, FaBook, FaBars, FaMoon } from 'react-icons/fa'
 
 const menuItems = [
   {
@@ -31,13 +31,13 @@ const menuItems = [
 ]
 
 
-const Header = () => {
+const Header = ({setDarkMode, darkMode}) => {
   const [showMenu, setShowMenu] = React.useState(false)
   const toggleShowMenu = () => setShowMenu(!showMenu)
 
   return (
     <header>
-      <nav className="top-nav">
+      <nav className={`top-nav ${darkMode ? "top-nav-dark" : ""}`}>
         <Link to="/"><div className="logo">Zane Hitchcox</div></Link>
         <div className={`nav-links ${showMenu ? "" : "hide"}`}>
           {
@@ -54,6 +54,16 @@ const Header = () => {
               </a>
             ))
           }
+          <a onClick={() => setDarkMode(!darkMode)}>
+            <div className="nav-item">
+              <div className="nav-icon">
+              <FaMoon />
+              </div>
+              <div className="nav-text">
+                Dark Mode
+              </div>
+            </div>
+          </a>
         </div>
         <div className="bars" onClick={toggleShowMenu}>
           <FaBars />
