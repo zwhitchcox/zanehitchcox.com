@@ -57,7 +57,7 @@ const Header = ({setDarkMode, darkMode}) => {
           <a onClick={() => setDarkMode(!darkMode)}>
             <div className="nav-item">
               <div className="nav-icon">
-              <FaMoon />
+                <FaMoon />
               </div>
               <div className="nav-text">
                 Dark Mode

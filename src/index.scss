@@ -68,7 +68,7 @@ main {
 a {
   text-decoration: none;
   color: $indigo-dye;
-  cursor: default;
+  // cursor: default;
 }
 @media print {
   a, a:hover, a:visited {
