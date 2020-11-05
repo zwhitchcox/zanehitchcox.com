@@ -1,6 +1,5 @@
 import * as React from 'react'
 import YAML from 'yamljs'
-import "./Resume.scss"
 
 const renderContactInfo = data => {
   return (

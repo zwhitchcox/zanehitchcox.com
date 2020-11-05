@@ -21,6 +21,7 @@ code {
     monospace;
 }
 
+$nav-height: 65px;
 
 // https://coolors.co/c33c54-254e70-37718e-8ee3ef-aef3e7
 $brick-red: hsla(349, 53%, 50%, 1);
@@ -31,6 +32,7 @@ $celeste: hsla(170, 74%, 82%, 1);
 
 // light
 $indigo-dye-light: hsla(207, 50%, 80%, 1);
+$sky-blue-crayola: hsla(187, 75%, 95%, 1);
 
 // dark
 $indigo-dye-dark: hsla(207, 50%, 10%, 1);
@@ -78,6 +80,7 @@ a {
 }
 
 @import "./Cmpt/Header.scss";
+@import "./Pages/Resume.scss";
 
 @media screen {
   .hide-screen {

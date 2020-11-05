@@ -1,4 +1,5 @@
 .resume {
+  margin-top: $nav-height + 30px;
   h1 {
     font-size: 3em;
     font-weight: bold;
@@ -103,5 +104,17 @@
       flex-direction: column;
       align-content: center;
     }
+  }
+}
+
+@media print {
+  .resume {
+    margin-top: 2em;
+  }
+  h1,h2,h3 {
+    color: black !important;
+  }
+  a {
+    color: black !important;
   }
 }

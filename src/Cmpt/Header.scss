@@ -1,5 +1,7 @@
-$nav-height: 65px;
 .top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: $indigo-dye;
   padding: .2em;
   font-size: 1.2em;
@@ -101,16 +103,16 @@ $nav-height: 65px;
   }
 }
 .top-nav-dark {
-  background-color: #efefef;
+  background-color: #111;
   .logo {
-    color: black;
+    color: white;
   }
   .nav-links {
     a, a:hover {
-      color: black;
+      color: white;
     }
     .nav-icon {
-      color: black;
+      color: white;
     }
   }
 }
