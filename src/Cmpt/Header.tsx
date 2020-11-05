@@ -22,7 +22,7 @@ const Header = () => {
           <a onClick={window.print}><li>
             <FaPrint />
          </li></a>
-          <Link to="/refs"><li className="item">Refs</li></Link>
+          <a href="https://github.com/zwhitchcox?tab=repositories&q=ref-&type=&language="><li className="item">Refs</li></a>
         </ul>
       </nav>
     </header>

@@ -95,3 +95,13 @@
     // }
   }
 }
+@media (max-width: 750px) {
+  .resume {
+    .skills {
+      width: 100%;
+      display:flex;
+      flex-direction: column;
+      align-content: center;
+    }
+  }
+}
