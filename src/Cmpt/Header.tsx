@@ -19,7 +19,7 @@ const menuItems = [
     text: "Github",
   },
   {
-    link: "window.print()",
+    link: "javascript:window.print()",
     icon: <FaPrint />,
     text: "Print",
   },
