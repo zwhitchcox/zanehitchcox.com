@@ -81,11 +81,21 @@ $nav-height: 65px;
       top: $nav-height;
       flex-direction: column;
       color: white;
-      right: .4em;
+      right: 0;
       background-color: $indigo-dye-dark;
+      width: 100%;
       a {
         align-items: center;
         justify-items: center;
+        width: 100%;
+        .nav-item {
+          .nav-text {
+            display: block;
+          }
+        }
+      }
+      .nav-item {
+        max-width: 1000px;
       }
     }
   }
