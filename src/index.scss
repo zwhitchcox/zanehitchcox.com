@@ -5,13 +5,14 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ececec;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -47,6 +48,21 @@ main {
 a {
   text-decoration: none;
   color: $indigo-dye-dark;
+  cursor: default;
+}
+@media print {
+  a, a:hover, a:visited {
+    color: black;
+  }
+  body {
+    font-size: .9em;
+  }
 }
 
 @import "./Cmpt/Header.scss";
+
+@media screen {
+  .hide-screen {
+    display: none;
+  }
+}

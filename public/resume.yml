@@ -51,11 +51,13 @@ experience:
       - company: McDonald's Corporation
         title: Full Stack Software Engineer
         description: Created dashboard for at-a-glance analytics for various McDonald’s metrics
-  - company: HEP, Inc.
+  - type: employee
+    company: HEP, Inc.
     title: Webmaster
+    duration: January 2008 - January 2016
     description: Created and managed company website, managed CRM and other company IT projects
 education:
-  - school: University of Tennessee (#8 Program in US in 2015)
+  - school: University of Tennessee
     location: Knoxville
     graduation: July 2015
     degree: B.S. in Business Administration
