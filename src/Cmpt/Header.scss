@@ -39,6 +39,7 @@ $nav-height: 65px;
       margin-right: .4em;
     }
     .nav-item {
+      box-sizing: border-box;
       display: flex;
       align-items:center;
       justify-items: center;
@@ -51,8 +52,22 @@ $nav-height: 65px;
     }
   }
 }
+@media screen and (max-width: 1200px) {
+  .top-nav {
+    .nav-item {
+      max-width: 32px;
+      overflow: hidden;
+      transition: all 1.5s;
+      white-space: nowrap;
+      &:hover {
+        max-width: 500px;
+      }
+    }
+  }
 
-@media screen and (max-width: 1070px) {
+}
+
+@media screen and (max-width: 600px) {
   .top-nav {
     .hide {
       display: none;
