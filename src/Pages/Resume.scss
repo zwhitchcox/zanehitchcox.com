@@ -74,7 +74,8 @@
       padding-bottom: 0;
     }
     .company {
-      color: $celadon-blue;
+      color: $indigo-dye;
+      font-weight: bold;
     }
   }
   .contractor-experience {
@@ -99,6 +100,17 @@
     // }
   }
 }
+
+.body-dark {
+  .resume {
+    .experience {
+      .company {
+        color: $celadon-blue;
+      }
+    }
+  }
+}
+
 @media (max-width: 750px) {
   .resume {
     .skills {
