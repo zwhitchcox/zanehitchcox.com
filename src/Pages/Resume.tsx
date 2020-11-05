@@ -39,7 +39,7 @@ const renderOpenSource = data => (
         <p>Creator/Maintainer</p>
         <ul>
           {data.open_source.creator.map(({name, link}) => (
-            <a href={link} key={link}><li>{name}</li></a>
+            <li><a href={link} key={link}>{name}</a></li>
           ))}
         </ul>
       </div>
@@ -47,7 +47,7 @@ const renderOpenSource = data => (
         <p>Contributor</p>
         <ul>
           {data.open_source.contributor.map(({name, link}) => (
-            <a key={link} href={link}><li>{name}</li></a>
+            <li><a key={link} href={link}>{name}</a></li>
           ))}
         </ul>
       </div>
@@ -58,13 +58,13 @@ const renderOpenSource = data => (
 const ContractorExperience = ({jobs, duration}) => (
   <div className="experience contractor-experience">
     <div className="general">
-      <div><i>Contractor</i></div>
+      <div><i className="company">Contractor</i></div>
       <div>({duration})</div>
     </div>
     <div className="description">
       <ul>
         {jobs.map(({company, title, description}) => (
-          <li key={company}><p><i>{company}</i> - {title}</p>
+          <li key={company}><p><i className="company">{company}</i> - {title}</p>
           <p>{description}</p>
           </li>
         ))}
@@ -76,7 +76,7 @@ const ContractorExperience = ({jobs, duration}) => (
 const EmployeeExperience = ({company, title, duration, description}) => (
   <div className="experience employee-experience">
     <div className="general">
-      <div><i>{company}</i> - {title}</div>
+      <div><i className="company">{company}</i> - {title}</div>
       <div>({duration})</div>
     </div>
     <div className="description">
