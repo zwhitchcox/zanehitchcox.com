@@ -14,6 +14,7 @@ const lsDarkState = localStorage.getItem(DARK_SAVE)
 const initDarkState = lsDarkState ? lsDarkState === "true" : hourDarkState
 
 function App() {
+  /* DARK MODE */
   const [darkMode, _setDarkMode] = useState(initDarkState)
   useEffect(() => {
     if (initDarkState) {
@@ -31,10 +32,19 @@ function App() {
     localStorage.setItem(DARK_SAVE, bool)
     _setDarkMode(bool)
   }
+
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <Router>
-      <div className={`App ${darkMode ? "App-dark" : ""}`}>
-        <Header {...({darkMode, setDarkMode})} />
+      <div
+        className={`App ${darkMode ? "App-dark" : ""}`}
+        onClick={() => {
+          if (menuOpen)
+            setMenuOpen(false)
+        }}
+      >
+        <Header {...({darkMode, setDarkMode, menuOpen, setMenuOpen})} />
         <main>
           <Switch>
             <Route path="/">

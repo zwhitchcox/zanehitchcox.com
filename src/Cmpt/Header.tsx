@@ -31,15 +31,14 @@ const menuItems = [
 ]
 
 
-const Header = ({setDarkMode, darkMode}) => {
-  const [showMenu, setShowMenu] = React.useState(false)
-  const toggleShowMenu = () => setShowMenu(!showMenu)
+const Header = ({setDarkMode, darkMode, menuOpen, setMenuOpen}) => {
+  const toggleShowMenu = () => setMenuOpen(!menuOpen)
 
   return (
     <header>
       <nav className={`top-nav ${darkMode ? "top-nav-dark" : ""}`}>
         <Link to="/"><div className="logo">Zane Hitchcox</div></Link>
-        <div className={`nav-links ${showMenu ? "" : "hide"}`}>
+        <div className={`nav-links ${menuOpen ? "" : "hide"}`}>
           {
             menuItems.map(({link, icon, text}) => (
               <a href={link} key={link}>
