@@ -24,7 +24,7 @@ const menuItems = [
     text: "Print",
   },
   {
-    link: "https://github.com/zwhitchcox?tab=repositories&q=ref-&type=&language=",
+    link: "https://github.com/zwhitchcox?tab=repositories&q=ref+&type=&language=",
     icon: <FaBook />,
     text: "Refs",
   }
