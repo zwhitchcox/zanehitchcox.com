@@ -12,7 +12,7 @@ const curHour = (new Date).getHours()
 const hourDarkState = curHour < 9 || curHour > 12 + 6
 const lsDarkState = localStorage.getItem(DARK_SAVE)
 const initDarkState = lsDarkState ? lsDarkState === "true" : hourDarkState
-
+const refsLink = "https://github.com/zwhitchcox?tab=repositories&q=ref+&type=&language="
 function App() {
   /* DARK MODE */
   const [darkMode, _setDarkMode] = useState(initDarkState)
@@ -47,6 +47,14 @@ function App() {
         <Header {...({darkMode, setDarkMode, menuOpen, setMenuOpen})} />
         <main>
           <Switch>
+            <Route path="/refs">
+              {() => {
+                window.location.href=refsLink
+                return <div>
+                  Redirecting you to GitHub.
+                </div>
+              }}
+            </Route>
             <Route path="/">
               <Resume />
             </Route>
