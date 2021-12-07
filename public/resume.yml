@@ -37,9 +37,14 @@ open_source:
       link: https://prisma.io
 experience:
   - type: employee
+    company: Balena
+    title: Backend Engineer
+    duration: June 2019 - Present
+    description: Robotics company focused on autonomous vehicles and home automation
+  - type: employee
     company: Ivan Robotics
     title: Co-Founder/CEO
-    duration: January 2018 - Present
+    duration: January 2018 - June 2019
     description: Robotics company focused on autonomous vehicles and home automation
   - type: contractor
     duration: January 2016 - December 2017
