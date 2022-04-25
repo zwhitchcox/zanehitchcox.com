@@ -38,9 +38,9 @@ open_source:
 experience:
   - type: employee
     company: Balena
-    title: Backend Engineer
+    title: Senior Software Engineer
     duration: June 2019 - Present
-    description: Robotics company focused on autonomous vehicles and home automation
+    description: Worked on Etcher and backend engineering teams, tackling challenges of containerization and deployment of millions IoT devices at scale
   - type: employee
     company: Ivan Robotics
     title: Co-Founder/CEO
