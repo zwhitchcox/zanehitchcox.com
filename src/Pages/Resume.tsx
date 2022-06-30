@@ -67,16 +67,16 @@ const renderExperience = (data: any) => (
     <h3>Work Experience</h3>
     {data.experience.map((experience: any, i: number) => {
       if (experience.type === "employee") {
-        return <>
-          <EmployeeExperience {...experience} key={i} />
-        </>
+        return <span key={i}>
+          <EmployeeExperience {...experience}  />
+        </span>
       }
       if (experience.type === "contractor") {
-        return <>
+        return <span key={i}>
           <ContractorExperience {...experience} key={i}/>
-        </>
+        </span>
       }
-      return <span/>
+      return <span key={i}/>
     })}
   </section>
 )

@@ -24,10 +24,15 @@ experience:
     duration: June 2019 - Present
     description: Worked on Etcher and backend engineering teams, tackling challenges of containerization and deployment of millions IoT devices at scale
   - type: employee
-    duration: May 2008 - October 2019
+    duration: May 2015 - June 2019
     company: Accenture
     title: Full Stack Software Engineer
     description: Subject Matter Expert Level III, building whatever the product needed for various companies including McDonald’s, Verizon, the U.S. Government, etc, using myriad technologies and skillsets.
+  - type: employee
+    duration: May 2008 - June 2015
+    company: HEP
+    title: Software Engineer
+    description: Started by doing the company's website and ended up automating many of the company's internal procedures while teaching myself to code and earning my BA in Accounting.
 education:
   - school: University of Tennessee
     location: Knoxville
