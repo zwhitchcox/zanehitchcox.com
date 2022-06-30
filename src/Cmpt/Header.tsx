@@ -1,6 +1,8 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { FaGithub, FaEnvelope, FaPhone, FaPrint, FaBook, FaBars, FaMoon } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { toggleDarkMode } from '../store/store'
 
 const menuItems = [
   {
@@ -19,29 +21,27 @@ const menuItems = [
     text: "Github",
   },
   {
-    link: "javascript:window.print()",
+    link: "#print", // eslint-disable-line
     icon: <FaPrint />,
     text: "Print",
   },
-  {
-    link: "https://github.com/zwhitchcox?tab=repositories&q=ref+&type=&language=",
-    icon: <FaBook />,
-    text: "Refs",
-  }
 ]
 
 
-const Header = ({setDarkMode, darkMode, menuOpen, setMenuOpen}) => {
-  const toggleShowMenu = () => setMenuOpen(!menuOpen)
+const Header = () => {
+  const [menuOpen, setMenuOpen] = React.useState<Boolean>(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen)
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state: any) => state.darkMode.on);
 
   return (
     <header>
       <nav className={`top-nav ${darkMode ? "top-nav-dark" : ""}`}>
-        <Link to="/"><div className="logo">Zane Hitchcox</div></Link>
+        <div className="logo">Zane Hitchcox</div>
         <div className={`nav-links ${menuOpen ? "" : "hide"}`}>
           {
             menuItems.map(({link, icon, text}) => (
-              <a href={link} key={link}>
+              <a href={link} key={link} onClick={link === "#print" ? window.print : undefined}>
                 <div className="nav-item">
                   <div className="nav-icon">
                   {icon}
@@ -53,7 +53,7 @@ const Header = ({setDarkMode, darkMode, menuOpen, setMenuOpen}) => {
               </a>
             ))
           }
-          <a onClick={() => setDarkMode(!darkMode)}>
+          <span className="link" onClick={() => dispatch(toggleDarkMode)}>
             <div className="nav-item">
               <div className="nav-icon">
                 <FaMoon />
@@ -62,9 +62,9 @@ const Header = ({setDarkMode, darkMode, menuOpen, setMenuOpen}) => {
                 Dark Mode
               </div>
             </div>
-          </a>
+          </span>
         </div>
-        <div className="bars" onClick={toggleShowMenu}>
+        <div className="bars" onClick={toggleMenu}>
           <FaBars />
         </div>
       </nav>

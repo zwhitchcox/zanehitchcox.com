@@ -6,35 +6,17 @@ email: zwhitchcox@gmail.com
 website: zanehitchcox.com
 skills:
   - Javascript/Typescript
+  - C/C++
+  - Rust
   - ReactJS
   - DevOps
   - Web Assembly
   - NoSQL/SQL
-  - Mathematics
-  - Robotics
-  - AI/ML
-open_source:
-  creator:
-    - name: cruster.io
-      link: https://cruster.io
-    - name: zecos
-      link: https://zecos.io
-    - name: tezt
-      link: https://github.com/zwhitchcox/tezt
-    - name: ...many, many more
-  contributor:
-    - name: supergiant.io
-      link: https://github.com/supergiant
-    - name: React Starter Kit
-      link: https://github.com/kriasoft/react-starter-kit
-    - name: Webpack
-      link: https://github.com/webpack/webpack
-    - name: ReactJS
-      link: https://github.com/facebook/react
-    - name: MEAN.io
-      link: https://github.com/linnovate/mean
-    - name: Prisma
-      link: https://prisma.io
+github: zwhitchcox
+summary: |
+  Generalist software engineer without boundaries. If it runs on silicon, I’ve probably had some experience with it.
+
+  I’ve mostly focused on the web and have been an early adopter of NodeJS, React, Rust, Docker, Kubernetes and other web technologies.
 experience:
   - type: employee
     company: Balena
@@ -42,27 +24,10 @@ experience:
     duration: June 2019 - Present
     description: Worked on Etcher and backend engineering teams, tackling challenges of containerization and deployment of millions IoT devices at scale
   - type: employee
-    company: Ivan Robotics
-    title: Co-Founder/CEO
-    duration: January 2018 - June 2019
-    description: Robotics company focused on autonomous vehicles and home automation
-  - type: contractor
-    duration: January 2016 - December 2017
-    jobs:
-      - company: US Government
-        title: Software Engineer
-        description: Created UI for SSA agents to file and process claims using React, Webpack, Flux, Mobx, and NodeJS
-      - company: Verizon Communications
-        title: Technical Lead
-        description: Created scaffold project with Angular 2 and Typescript. Helped team create sample projects for Internet of Things (IoT) project as well as Verizon IoT website itself
-      - company: McDonald's Corporation
-        title: Full Stack Software Engineer
-        description: Created dashboard for at-a-glance analytics for various McDonald’s metrics
-  - type: employee
-    company: HEP, Inc.
-    title: Webmaster
-    duration: January 2008 - January 2016
-    description: Created and managed company website, managed CRM and other company IT projects
+    duration: May 2008 - October 2019
+    company: Accenture
+    title: Full Stack Software Engineer - Subject Matter Expert Level III
+    description: Subject Matter Expert Level III (highest rank). Built whatever the product needed for various companies including McDonald’s, Verizon, the U.S. Government, etc, using myriad technologies and skillsets.
 education:
   - school: University of Tennessee
     location: Knoxville

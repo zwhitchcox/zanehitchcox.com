@@ -1,7 +1,7 @@
 import * as React from 'react'
-import YAML from 'yamljs'
+import YAML from 'yaml'
 
-const renderContactInfo = data => {
+const renderContactInfo = (data: any) => {
   return (
     <>
       <h1 className="name">{data.name}</h1>
@@ -20,42 +20,19 @@ const renderContactInfo = data => {
   )
 }
 
-const renderSkills = data => (
+const renderSkills = (data: any) => (
   <section>
   <h3>Skills/Interests</h3>
   <ul className="skills">
-    {data.skills.map(skill => (
+    {data.skills.map((skill: any) => (
       <li key={skill}>{skill}</li>
     ))}
   </ul>
   </section>
 )
 
-const renderOpenSource = data => (
-  <section>
-    <h3>Open Source</h3>
-    <div className="lists">
-      <div className="list">
-        <p>Creator/Maintainer</p>
-        <ul>
-          {data.open_source.creator.map(({name, link}) => (
-            <li><a href={link} key={link}>{name}</a></li>
-          ))}
-        </ul>
-      </div>
-      <div className="list">
-        <p>Contributor</p>
-        <ul>
-          {data.open_source.contributor.map(({name, link}) => (
-            <li><a key={link} href={link}>{name}</a></li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </section>
-)
 
-const ContractorExperience = ({jobs, duration}) => (
+const ContractorExperience = ({jobs, duration}: any) => (
   <div className="experience contractor-experience">
     <div className="general">
       <div><i className="company">Contractor</i></div>
@@ -63,7 +40,7 @@ const ContractorExperience = ({jobs, duration}) => (
     </div>
     <div className="description">
       <ul>
-        {jobs.map(({company, title, description}) => (
+        {jobs.map(({company, title, description}: any) => (
           <li key={company}><p><i className="company">{company}</i> - {title}</p>
           <p>{description}</p>
           </li>
@@ -73,7 +50,7 @@ const ContractorExperience = ({jobs, duration}) => (
   </div>
 )
 
-const EmployeeExperience = ({company, title, duration, description}) => (
+const EmployeeExperience = ({company, title, duration, description}: any) => (
   <div className="experience employee-experience">
     <div className="general">
       <div><i className="company">{company}</i> - {title}</div>
@@ -85,10 +62,10 @@ const EmployeeExperience = ({company, title, duration, description}) => (
   </div>
 )
 
-const renderExperience = data => (
+const renderExperience = (data: any) => (
   <section>
     <h3>Work Experience</h3>
-    {data.experience.map((experience, i) => {
+    {data.experience.map((experience: any, i: number) => {
       if (experience.type === "employee") {
         return <>
           <EmployeeExperience {...experience} key={i} />
@@ -99,14 +76,15 @@ const renderExperience = data => (
           <ContractorExperience {...experience} key={i}/>
         </>
       }
+      return <span/>
     })}
   </section>
 )
 
-const renderEducation = ({education}) => (
+const renderEducation = ({education}: any) => (
   <section>
     <h3>Education</h3>
-    {education.map(({school, location, graduation, degree, major, minor}) => (
+    {education.map(({school, location, graduation, degree, major, minor}: any) => (
       <div key={school} className="education">
         <div className="general">
           <div>
@@ -122,6 +100,14 @@ const renderEducation = ({education}) => (
     ))}
   </section>
 )
+
+const renderSummary = ({summary}: any) => {
+  return (
+    <section className="summary">
+      {summary}
+    </section>
+  )
+}
 
 
 
@@ -156,8 +142,8 @@ const Resume = () => {
     <div className="resume">
       {renderContactInfo(resumeData)}
       <div className="content">
+        {renderSummary(resumeData)}
         {renderSkills(resumeData)}
-        {renderOpenSource(resumeData)}
         {renderExperience(resumeData)}
         {renderEducation(resumeData)}
       </div>
