@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -23,42 +25,10 @@ code {
 
 $nav-height: 65px;
 
-// https://coolors.co/c33c54-254e70-37718e-8ee3ef-aef3e7
-$brick-red: hsla(349, 53%, 50%, 1);
-$indigo-dye: hsla(207, 50%, 29%, 1);
-$celadon-blue: hsla(200, 44%, 75%, 1);
-$sky-blue-crayola: hsla(187, 75%, 75%, 1);
-$celeste: hsla(170, 74%, 82%, 1);
 
-// light
-$indigo-dye-light: hsla(207, 50%, 80%, 1);
-$sky-blue-crayola: hsla(187, 75%, 95%, 1);
-
-// dark
-$indigo-dye-dark: hsla(207, 50%, 10%, 1);
-$indigo-dye-dark-transparent: hsla(207, 50%, 10%, .9);
-.body-dark {
-  background-color: #333;
-  color: white;
-  a {
-    color: $indigo-dye-light;
-  }
-  h1 {
-    color: $sky-blue-crayola;
-  }
-  h2 {
-    color: $celadon-blue;
-  }
-  h3 {
-    color: $celeste;
-  }
-}
 
 h1, h2 {
   text-align: center;
-}
-main {
-  margin: 1em;
 }
 @media print {
   main {
@@ -71,6 +41,7 @@ a {
   color: $indigo-dye;
   // cursor: default;
 }
+
 @media print {
   a, a:hover, a:visited {
     color: black;

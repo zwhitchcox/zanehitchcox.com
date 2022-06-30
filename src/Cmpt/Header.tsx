@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { FaGithub, FaEnvelope, FaPhone, FaPrint, FaBook, FaBars, FaMoon } from 'react-icons/fa'
+import { FaGithub, FaEnvelope, FaPhone, FaPrint, FaBars, FaMoon, FaSun } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { toggleDarkMode } from '../store/store'
+import { toggle } from '../store/store'
 
 const menuItems = [
   {
@@ -24,6 +24,7 @@ const menuItems = [
     link: "#print", // eslint-disable-line
     icon: <FaPrint />,
     text: "Print",
+    onClick: window.print,
   },
 ]
 
@@ -40,8 +41,8 @@ const Header = () => {
         <div className="logo">Zane Hitchcox</div>
         <div className={`nav-links ${menuOpen ? "" : "hide"}`}>
           {
-            menuItems.map(({link, icon, text}) => (
-              <a href={link} key={link} onClick={link === "#print" ? window.print : undefined}>
+            menuItems.map(({link, icon, text, onClick}) => (
+              <a href={link} key={link} onClick={onClick}>
                 <div className="nav-item">
                   <div className="nav-icon">
                   {icon}
@@ -53,10 +54,10 @@ const Header = () => {
               </a>
             ))
           }
-          <span className="link" onClick={() => dispatch(toggleDarkMode)}>
+          <span className="link" onClick={() => dispatch(toggle())}>
             <div className="nav-item">
               <div className="nav-icon">
-                <FaMoon />
+                {darkMode ? <FaSun /> : <FaMoon />}
               </div>
               <div className="nav-text">
                 Dark Mode

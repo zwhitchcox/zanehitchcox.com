@@ -23,7 +23,7 @@ const darkModeSlice = createSlice({
   }
 })
 
-export const { toggle: toggleDarkMode } = darkModeSlice.actions;
+export const { toggle } = darkModeSlice.actions;
 
 export default configureStore({
   reducer: {

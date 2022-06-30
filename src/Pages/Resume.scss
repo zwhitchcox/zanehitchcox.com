@@ -1,5 +1,6 @@
 .resume {
-  margin-top: $nav-height + 30px;
+  padding-top: $nav-height + 30px;
+  padding-bottom: $nav-height + 30px;
   h1 {
     font-size: 3em;
     font-weight: bold;
@@ -101,7 +102,7 @@
   }
 }
 
-.body-dark {
+.App-dark {
   .resume {
     .experience {
       .company {

@@ -35,6 +35,17 @@
       font-size: 1.2em;
       padding: .3em .8em;
     }
+    span.link {
+      text-decoration: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      padding: .3em .8em;
+      .nav-text {
+        display: none;
+      }
+    }
     .nav-icon {
       display: flex;
       align-items: center;
@@ -46,11 +57,6 @@
       align-items:center;
       justify-items: center;
       height: 32px;
-    }
-    a:nth-child(n+3) {
-      .nav-text {
-        display: none;
-      }
     }
   }
 }

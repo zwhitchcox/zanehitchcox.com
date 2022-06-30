@@ -1,0 +1,20 @@
+// https://coolors.co/c33c54-254e70-37718e-8ee3ef-aef3e7
+$brick-red: hsla(349, 53%, 50%, 1);
+@import "colors.scss";
+
+.App-dark {
+  background-color: #333;
+  color: white;
+  a {
+    color: $indigo-dye-light;
+  }
+  h1 {
+    color: $sky-blue-crayola;
+  }
+  h2 {
+    color: $celadon-blue;
+  }
+  h3 {
+    color: $celeste;
+  }
+}
