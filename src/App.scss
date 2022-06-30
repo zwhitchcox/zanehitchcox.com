@@ -2,6 +2,12 @@
 $brick-red: hsla(349, 53%, 50%, 1);
 @import "colors.scss";
 
+.App {
+  background-color: #eee;
+  padding-top: $nav-height + 30px;
+  padding-bottom: $nav-height + 30px;
+}
+
 .App-dark {
   background-color: #333;
   color: white;
@@ -16,5 +22,13 @@ $brick-red: hsla(349, 53%, 50%, 1);
   }
   h3 {
     color: $celeste;
+  }
+}
+
+@media print {
+  .App {
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
