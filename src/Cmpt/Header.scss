@@ -50,6 +50,8 @@
       display: flex;
       align-items: center;
       margin-right: .4em;
+      color: white;
+      cursor: pointer;
     }
     .nav-item {
       box-sizing: border-box;
@@ -112,15 +114,6 @@
   background-color: $indigo-dye-dark-transparent;
   .logo {
     color: white;
-  }
-  .nav-links {
-    a, a:hover {
-      color: white;
-    }
-    .nav-icon {
-      color: white;
-      cursor: pointer;
-    }
   }
 }
 
