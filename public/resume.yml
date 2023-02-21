@@ -25,8 +25,8 @@ summary: |
 experience:
   - type: employee
     company: Open Source
-    title: Senior Software Engineer
-    duration: June 2019 - Present
+    title: Software Engineer
+    duration: 2008 - Present
     description: |
       * Maintainer of [Etcher](https://etcher.io/) (24.9k stars on Github), flashing millions of devices per month cross-platform for Windows, MacOS, and Linux
       * **[happy eyeballs](https://github.com/balena-io-modules/happy-eyeballs)** - standards driven method of redundant connection attempts using various protocols, eventually implemented in NodeJS core
