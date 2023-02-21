@@ -1,4 +1,5 @@
 import * as React from 'react'
+import ReactMarkdown from 'react-markdown'
 import YAML from 'yaml'
 
 const renderContactInfo = (data: any) => {
@@ -22,7 +23,7 @@ const renderContactInfo = (data: any) => {
 
 const renderSkills = (data: any) => (
   <section>
-  <h3>Skills/Interests</h3>
+  <h3>Skills</h3>
   <ul className="skills">
     {data.skills.map((skill: any) => (
       <li key={skill}>{skill}</li>
@@ -32,32 +33,15 @@ const renderSkills = (data: any) => (
 )
 
 
-const ContractorExperience = ({jobs, duration}: any) => (
-  <div className="experience contractor-experience">
-    <div className="general">
-      <div><i className="company">Contractor</i></div>
-      <div>({duration})</div>
-    </div>
-    <div className="description">
-      <ul>
-        {jobs.map(({company, title, description}: any) => (
-          <li key={company}><p><i className="company">{company}</i> - {title}</p>
-          <p>{description}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-)
-
 const EmployeeExperience = ({company, title, duration, description}: any) => (
   <div className="experience employee-experience">
+    <h4><span className="company">{company}</span></h4>
     <div className="general">
-      <div><i className="company">{company}</i> - {title}</div>
-      <div>({duration})</div>
+    <div className="title">{title}</div>
+    <div className="duration">({duration})</div>
     </div>
     <div className="description">
-      {description}
+      <ReactMarkdown children={description} />
     </div>
   </div>
 )
@@ -71,11 +55,6 @@ const renderExperience = (data: any) => (
           <EmployeeExperience {...experience}  />
         </span>
       }
-      if (experience.type === "contractor") {
-        return <span key={i}>
-          <ContractorExperience {...experience} key={i}/>
-        </span>
-      }
       return <span key={i}/>
     })}
   </section>
@@ -84,18 +63,14 @@ const renderExperience = (data: any) => (
 const renderEducation = ({education}: any) => (
   <section>
     <h3>Education</h3>
-    {education.map(({school, location, graduation, degree, major, minor}: any) => (
+    {education.map(({school, location, graduation, degree, major, minor, description}: any) => (
       <div key={school} className="education">
+          <div className="school">{school}, {location}</div>
         <div className="general">
-          <div>
-            <i>{school}, {location}</i>
-          </div>
+          <div className="degree">{degree}, {major}</div>
           <div className="graduation">({graduation})</div>
         </div>
-        <div className="degree">
-          <div>{degree}</div>
-          <div className="major">Major: {major}, Collateral: {minor}</div>
-        </div>
+        <div className="description"><ReactMarkdown children={description} /></div>
       </div>
     ))}
   </section>

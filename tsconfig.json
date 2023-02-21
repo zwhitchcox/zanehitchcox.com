@@ -15,13 +15,12 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitAny": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": [
-    "src", "Pages/Resume.tsx"
+    "src"
   ]
 }

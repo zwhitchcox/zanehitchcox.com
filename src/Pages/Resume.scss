@@ -26,15 +26,17 @@
     }
   }
   h3 {
-    font-family: Anitc, sans-serif;
+    font-family: Antic, sans-serif;
     margin-bottom: .2em;
+    text-transform: uppercase;
+    color: $indigo-dye;
   }
   .content {
     max-width: 900px;
     margin: 1.5em auto;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     section {
-      margin: 1em 0;
+      margin: 1rem 0;
     }
   }
   .skills {
@@ -44,6 +46,7 @@
     grid-auto-flow: column;
     justify-items: space-around;
     margin: 0 2em;
+    font-size: 1.1rem;
   }
   .lists {
     display: flex;
@@ -60,23 +63,51 @@
       font-style: italic;
     }
   }
+  .company, .school {
+    color: $indigo-dye;
+    font-weight: bold;
+  }
   .experience {
+    h4 {
+      font-size: 1rem;
+      .company {
+        font-size: 1.3rem;
+      }
+    }
+      .title {
+        font-size: 1.1rem;
+        font-weight: normal;
+        font-style: italic;
+      }
+      .duration {
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: normal;
+      }
     .general {
       display: flex;
       justify-content: space-between;
     }
-    margin-top: .5em;
+    margin-top: .9em;
     .company {
       color: $indigo-dye;
       font-weight: bold;
     }
   }
-  .contractor-experience {
-    .description {
-      padding-left: 2em;
-      li {
-        margin-top: .5em;
-      }
+  .description {
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    li {
+      margin-top: .2rem;
+      list-style: none;
+    }
+    li:before {
+      content:"·";
+      font-size:24px;
+      vertical-align:middle;
+      line-height:1rem;
+      padding-right: .5rem;
     }
   }
   .education {
@@ -84,13 +115,19 @@
       display: flex;
       justify-content: space-between;
     }
+    .degree {
+        font-size: 1.1rem;
+        font-weight: normal;
+        font-style: italic;
+    }
+    .graduation, .major {
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: normal;
+    }
     .major {
       margin-left: 1em;
     }
-    // .degree {
-    //   display: flex;
-    //   justify-content: space-between;
-    // }
   }
 }
 
