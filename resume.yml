@@ -8,31 +8,63 @@ skills:
   - Javascript/Typescript
   - C/C++
   - Rust
+  - Golang
+  - Docker
+  - WASM/WASI
   - ReactJS
   - DevOps
-  - Web Assembly
   - NoSQL/SQL
+  - Linux Kernel
 github: zwhitchcox
 summary: |
-  Generalist software engineer without boundaries. If it runs on silicon, I’ve probably had some experience with it.
-
-  I’ve mostly focused on the web and have been an early adopter of NodeJS, React, Rust, Docker, Kubernetes and other web technologies.
+  I’ve been a full stack engineer for almost 16 years. I live and breathe code and
+  love anything that runs on silicon (except Java). I’ve been an early adopter of
+  most prominent web technologies, like Rust, TypeScript, WebASsembly,
+  Docker, Kubernetes, ReactJS, etc., and I’m always looking to improve my skill
+  set.
 experience:
   - type: employee
-    company: Balena
+    company: Open Source
     title: Senior Software Engineer
     duration: June 2019 - Present
-    description: Worked on Etcher and backend engineering teams, tackling challenges of containerization and deployment of millions IoT devices at scale
+    description: |
+      * Maintainer of [Etcher](https://etcher.io/) (24.9k stars on Github), flashing millions of devices per month cross-platform for Windows, MacOS, and Linux
+      * **[happy eyeballs](https://github.com/balena-io-modules/happy-eyeballs)** - standards driven method of redundant connection attempts using various protocols, eventually implemented in NodeJS core
+      * **[Cruster](https://cruster.io/)** - Allows you to easily deploy kubernetes clusters onto raspberry pis on your home network, featured on multiple Kubernetes blogs, 35 stars on github
+      * **[Scriptz](https://scriptz.sh/)** - Create and manage scripts, tokens, etc. and run them from the command line cross platform
+      * **[node-ext2fs](https://github.com/balena-io-modules/node-ext2fs)** - mount ext{2,3,4} file partitions and edit file system in user space. You can create files, symlinks, hard links, directories, anything you can do on a mounted file system. This works cross platform and uses WebAssembly under the hood to talk to the [e2fsprogs](https://github.com/tytso/e2fsprogs) back end
+      * **[drivelist](https://github.com/balena-io-modules/drivelist)** - Uses Native Node Module Addon written in C++, Objective-C, and TypeScript to list available block devices, determine if they are system devices, and other meta data about the drives. Works cross platform (MacOS, Linux, Windows)
+      * **[node-parted](https://github.com/zwhitchcox/node-parted)** - GNU partition editor ported to TypeScript from GNU Parted using WebAssembly for cross-platform (MacOS, Linux, Windows)
+      * **node-resize2fs** (soon to be open sourced) - resize ext partitions cross-platform
+      * Above are more popular projects I was/am maintainer of, but I’ve contributed to many open source projects and also created many more on my own, see my [GitHub](https://github.com/zwhitchcox)
+  - type: employee
+    company: Balena
+    title: Lead Software Engineer
+    duration: June 2019 - Present
+    description: |
+      * Started as a backend engineer focused on security
+      * Was maintainer of Etcher and led team of 8 (at peak) to maintain Etcher which flashed millions of devices per month and was Balena’s primary advertising tool
+      * Implemented standards-based tools to solve technical challenges, like happy-eyeballs to solve problems with hundreds of thousands of devices
+      * Provided support for customer devices in field for linux kernel, docker engine, and networking problems
+      * Etcher project has been put into maintenance mode due to financial trouble at the company and entire team was laid off
   - type: employee
     duration: May 2015 - June 2019
     company: Accenture
-    title: Full Stack Software Engineer
-    description: Subject Matter Expert Level III, building whatever the product needed for various companies including McDonald’s, Verizon, the U.S. Government, etc, using myriad technologies and skillsets.
+    title: Subject Matter Expert Level III - Full Stack Engineer
+    description: |
+      * Worked with variety of corporations to modernize technologies on front and back end
+      * Was technical lead on several projects involving myriad applications
+      * Created data/metric analysis/monitoring
+      * Modernizing front ends using React, Redux, Typescript
+      * Modernized back end of websites with TypeScript, NodeJS, Go, Webpack, etc.
   - type: employee
     duration: May 2008 - June 2015
     company: HEP
-    title: Software Engineer
-    description: Started by doing the company's website and ended up automating many of the company's internal procedures while teaching myself to code and earning my BA in Accounting.
+    title: Software Engineering Manager
+    description: |
+      * Where I got my start as an engineer
+      * Created companies website and was eventually promoted to maintain the entire company’s (small business) information management and online marketing systems with a team of 2 people
+      * Automated many tasks that were being performed manually
 education:
   - school: University of Tennessee
     location: Knoxville
@@ -40,3 +72,6 @@ education:
     degree: B.S. in Business Administration
     major: Accounting
     minor: Supply Chain Management
+    description: |
+      * Completed my degree while teaching myself to code and working a full time job
+      * Accounting program is top 10 in the country
