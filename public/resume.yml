@@ -42,8 +42,9 @@ experience:
     title: Lead Software Engineer
     duration: June 2019 - Present
     description: |
+      * IoT tech company focused on fleet management and deployment
       * Started as a backend engineer focused on security
-      * Was maintainer of Etcher and led team of 8 (at peak) to maintain Etcher which flashed millions of devices per month and was Balena’s primary advertising tool
+      * Was maintainer of Etcher and led team of 4 (at peak) to maintain Etcher which flashed millions of devices per month and was Balena’s primary advertising tool
       * Implemented standards-based tools to solve technical challenges, like happy-eyeballs to solve problems with hundreds of thousands of devices
       * Provided support for customer devices in field for linux kernel, docker engine, and networking problems
   - type: employee
